@@ -1,6 +1,6 @@
 # 基于YOLOv5的手势识别控制程序
 
-## 摘要
+## 1.摘要
 
 随着信息技术的快速发展，计算机广泛进入人们的生活。在商务、游戏、教育、医疗等众多领域，都有不同的人机交互需求。研究更符合人们生活习惯的人机交互技术变得更加有意义。
 
@@ -12,7 +12,7 @@
 
 > 关键词：手势识别；目标检测；深度学习；YOLO；人机交互；模块注意力
 
-## 运行环境
+## 2.运行环境
 
 | 名称                 | 版本      | 名称                      | 版本        |
 | -------------------- | --------- | ------------------------- | ----------- |
@@ -74,34 +74,52 @@
 | pycocotools-windows  | 2.0       | zope.event                | 4.5.0       |
 | pycparser            | 2.21      | zope.interface            | 5.4.0       |
 
-## 关于自采数据集
+## 3.使用方法
 
-> 本自采数据集还有过多肖像等私人信息，不便于分享，十分抱歉
+项目导入pycharm，创建conda环境，使用pip装缺少的包。主程序是./yolov5-master/UI/mainUI.py。
 
-## 网络整体结构
+## 4.关于自采数据集
+
+本自采数据集还有过多肖像等私人信息，不便于分享，十分抱歉
+
+## 5.网络整体结构
 
 ![YOLOv5+CBAM](https://raw.githubusercontent.com/FeOAr/Gesture-recognition-and-control/main/ImgforReadme/backbone%E7%BD%91%E7%BB%9C.drawio.png)
 
 > 备注：common.py中添加了三种模块注意力机制，可以根据需求在yolov5m_CBAM.yaml中修改。
 
-## 一些补充
+## 6.一个较好的打标签办法
 
-### mAP文件夹
+<img src="https://raw.githubusercontent.com/FeOAr/Gesture-recognition-and-control/main/ImgforReadme/%E8%BF%AD%E4%BB%A3%E6%9B%B4%E6%96%B0%E6%B3%95.drawio.png" alt="标注流程" style="zoom:50%;" />
+
+## 7. 一些补充
+
+### 7.1 mAP文件夹
 
 > 该文件夹内容源自CSDN，暂时忘了出处
 
-### 修改网络成功后应该出现的模型信息
+### 7.2 修改网络成功后应该出现的模型信息
 
 > ./yolov5-master/runs/detect/model.pdf
 
-### 已训练模型
+### 7.3 已训练模型
 
 > ./yolov5-master/UI/weights
 
-### B站视频
+### 7.4 B站视频
 
 [B站视频](https://www.bilibili.com/video/BV1c44y1u7ex?spm_id_from=333.999.0.0)
 
-### 其他
+### 7.5 主程序结构与流程
+
+<img src="https://raw.githubusercontent.com/FeOAr/Gesture-recognition-and-control/main/ImgforReadme/%E7%A8%8B%E5%BA%8F%E5%85%B7%E4%BD%93%E6%B5%81%E7%A8%8B.drawio.png" alt="程序泳道图" style="zoom:60%;" />
+
+---
+
+---
+
+<img src="https://raw.githubusercontent.com/FeOAr/Gesture-recognition-and-control/main/ImgforReadme/%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84.drawio.png" alt="程序结构图" style="zoom:80%;" />
+
+### 6.6 其他
 
 注意在pycharm中配置模型路径
