@@ -122,23 +122,25 @@
 
 ## 7. 一些补充
 
-### 7.1 mAP文件夹
+### 7.1 本程序的“开启控制”按钮只能点击一次，开启一次控制线程，属于程序不完善。结束控制请点击“关闭摄像头”或结束程序。
+
+### 7.2 mAP文件夹
 
 > 该文件夹内容源自CSDN，暂时忘了出处
 
-### 7.2 修改网络成功后应该出现的模型信息
+### 7.3修改网络成功后应该出现的模型信息
 
 > ./yolov5-master/runs/detect/model.pdf
 
-### 7.3 已训练模型
+### 7.4 已训练模型
 
 > ./yolov5-master/UI/weights
 
-### 7.4 B站视频
+### 7.5 B站视频
 
 [B站视频](https://www.bilibili.com/video/BV1c44y1u7ex?spm_id_from=333.999.0.0)
 
-### 7.5 主程序结构与流程
+### 7.6 主程序结构与流程
 
 <img src="https://raw.githubusercontent.com/FeOAr/Gesture-recognition-and-control/main/ImgforReadme/%E7%A8%8B%E5%BA%8F%E5%85%B7%E4%BD%93%E6%B5%81%E7%A8%8B.drawio.png" alt="程序泳道图" style="zoom:60%;" />
 
