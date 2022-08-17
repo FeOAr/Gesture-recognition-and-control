@@ -1,20 +1,8 @@
 # 基于YOLOv5的手势识别控制程序
 
-## 1.摘要
+## 1.运行环境
 
-随着信息技术的快速发展，计算机广泛进入人们的生活。在商务、游戏、教育、医疗等众多领域，都有不同的人机交互需求。研究更符合人们生活习惯的人机交互技术变得更加有意义。
-
-本系统是人物动作检测系统中的具体应用。目标是使用传统摄像头和计算机实现通过人的手势控制演示文稿放映，主要研究内容分为融合模块注意力机制的YOLOv5模型的调整与搭建、手势识别数据集的建立、交互与控制逻辑的设计实现以及UI交互界面的设计实现。
-
-本系统技术层面是以基于视觉的深度学习方法为核心，使用传统的二维RGB摄像头采集人体手部信息，利用手势检测识别网络模型识别手部位置坐标、大小与类型信息。控制部分利用当前时刻与前一时刻采集到的手势信息综合判断解读语义，然后根据不同的手势语义，使用PyKeyboard发出相应控制指令,例如操作鼠标指针、PPT翻页、图片缩放等功能。
-
-本系统UI交互界面清晰易于控制，核心网络在引入模块注意力机制后，对手部的检测率及分类准确度有较小提升，网络参数少量增加，识别速率小幅降低。手势控制部分的目标功能成功率较好，可以满足使用需求。
-
-> 关键词：手势识别；目标检测；深度学习；YOLO；人机交互；模块注意力
-
-## 2.运行环境
-
-### 2.1 包环境
+### 1.1 包环境
 
 |         名称         |   版本    |           名称            |    版本     |
 | :------------------: | :-------: | :-----------------------: | :---------: |
@@ -76,7 +64,7 @@
 | pycocotools-windows  |    2.0    |        zope.event         |    4.5.0    |
 |      pycparser       |   2.21    |      zope.interface       |    5.4.0    |
 
-### 2.2 开发及训练环境
+### 1.2 开发及训练环境
 
 |  操作系统  |             Windows 11 22H2              |
 | :--------: | :--------------------------------------: |
@@ -102,45 +90,45 @@
 
 
 
-## 3.使用方法
+## 2.使用方法
 
 项目导入pycharm，创建conda环境，使用pip装缺少的包。主程序是./yolov5-master/UI/mainUI.py。
 
-## 4.关于自采数据集
+## 3.关于自采数据集
 
 本自采数据集含有过多肖像等私人信息，不便于分享，十分抱歉
 
-## 5.网络整体结构
+## 4.网络整体结构
 
 ![YOLOv5+CBAM](https://raw.githubusercontent.com/FeOAr/Gesture-recognition-and-control/main/ImgforReadme/backbone%E7%BD%91%E7%BB%9C.drawio.png)
 
 > 备注：common.py中添加了三种模块注意力机制，可以根据需求在yolov5m_CBAM.yaml中修改。
 
-## 6.一个较好的打标签办法
+## 5.一个较好的打标签办法
 
 <img src="https://raw.githubusercontent.com/FeOAr/Gesture-recognition-and-control/main/ImgforReadme/%E8%BF%AD%E4%BB%A3%E6%9B%B4%E6%96%B0%E6%B3%95.drawio.png" alt="标注流程" style="zoom:50%;" />
 
-## 7. 一些补充
+## 6. 一些补充
 
-### 7.1 本程序的“开启控制”按钮只能点击一次，开启一次控制线程，属于程序不完善。结束控制请点击“关闭摄像头”或结束程序。
+### 6.1 本程序的“开启控制”按钮只能点击一次，开启一次控制线程，属于程序不完善。结束控制请点击“关闭摄像头”或结束程序。
 
-### 7.2 mAP文件夹
+### 6.2 mAP文件夹
 
 > 该文件夹内容源自CSDN，暂时忘了出处
 
-### 7.3修改网络成功后应该出现的模型信息
+### 6.3修改网络成功后应该出现的模型信息
 
 > ./yolov5-master/runs/detect/model.pdf
 
-### 7.4 已训练模型
+### 6.4 已训练模型
 
 > ./yolov5-master/UI/weights
 
-### 7.5 B站视频
+### 6.5 B站视频
 
 [B站视频](https://www.bilibili.com/video/BV1c44y1u7ex?spm_id_from=333.999.0.0)
 
-### 7.6 主程序结构与流程
+### 6.6 主程序结构与流程
 
 <img src="https://raw.githubusercontent.com/FeOAr/Gesture-recognition-and-control/main/ImgforReadme/%E7%A8%8B%E5%BA%8F%E5%85%B7%E4%BD%93%E6%B5%81%E7%A8%8B.drawio.png" alt="程序泳道图" style="zoom:60%;" />
 
@@ -150,6 +138,6 @@
 
 <img src="https://raw.githubusercontent.com/FeOAr/Gesture-recognition-and-control/main/ImgforReadme/%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84.drawio.png" alt="程序结构图" style="zoom:80%;" />
 
-### 6.6 其他
+### 6.7 其他
 
 注意在pycharm中配置模型路径
